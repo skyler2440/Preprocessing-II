@@ -1,1 +1,27 @@
 // Navigation Styles here
+
+.nav-container {
+  border-bottom: 1px dashed grey;
+  max-width: 900px;
+  margin: 0 auto;
+  h1 {
+    .flex(flex-start);
+    margin: 1rem 0 2rem 5rem;
+  }
+  .nav-home {
+    .flex(flex-end);
+    a {
+      //  padding-bottom: 2rem;
+      margin: -5rem 6rem 2rem 0;
+      font-size: 2rem;
+      color: black;
+      text-decoration: none;
+      &:hover {
+        color: red;
+      }
+      &.active {
+        color: green;
+      }
+    }
+  }
+}
