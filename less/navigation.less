@@ -1,5 +1,6 @@
 // Navigation Styles here
 
+
 .nav-container {
   border-bottom: 1px dashed grey;
   max-width: 900px;
@@ -7,12 +8,22 @@
   h1 {
     .flex(flex-start);
     margin: 1rem 0 2rem 5rem;
-  }
+@media @mobile {
+    .flex(space-evenly; center; row;);
+    margin-bottom: 7rem;
+}  
+}
+
   .nav-home {
+    padding-right: 3.5rem;    
     .flex(flex-end);
+    @media @mobile{
+        .flex(space-evenly; center;);
+        
+    }
     a {
-      //  padding-bottom: 2rem;
-      margin: -5rem 6rem 2rem 0;
+    
+      margin: -5rem 1.5rem 2rem 0;
       font-size: 2rem;
       color: black;
       text-decoration: none;
@@ -20,8 +31,13 @@
         color: red;
       }
       &.active {
-        color: green;
-      }
+        color: green;}
+        @media @mobile{
+            font-size: 1.7rem;
+        
     }
+}
+
+
   }
 }

@@ -1,22 +1,40 @@
 .home {
-
   .content-section {
     margin: 30px 0;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    @media @mobile {
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      // justify-content: center;
+      // align-content: center;
+      // align-items: center;
+      h2 {
+        .flex(flex-start);
+      }
+    }
 
-   
-    
     .text-content {
       width: 48%;
       padding-right: 1%;
+      @media @mobile {
+        width: 98%;
+        margin: 2rem;
+        h2 {
+          margin-top: 1rem;
+        }
+      }
     }
 
     .img-content {
       width: 48%;
       padding-left: 1%;
-
+      @media @mobile {
+        width: 98%;
+        margin: 2rem;
+      }
       img {
         border-radius: 10px;
       }
@@ -41,9 +59,16 @@
   .content-destination {
     width: 75%;
     margin: 0 auto 30px;
-
+    @media @mobile {
+      width: 98%;
+      margin: 2rem;
+    }
     img {
       border-radius: 10px;
+      @media @mobile {
+        width: 98%;
+      }
+      margin: 2px;
     }
   }
 
@@ -53,12 +78,48 @@
     display: flex;
     justify-content: space-between;
 
-    .destination {
-      width: 30%;
-      margin-bottom: 30px;
+    button {
+      border-radius: 10px;
+      width: 90%;
+      padding: 1rem;
+      background-color: @eastern-blue;
+      color: @silver;
+      font-size: 1.5rem;
+    }
+    @media @mobile {
+      // width: 100%;
+      display: flex;
+      justify-content: flex-start;
+      align-content: center;
+      flex-direction: column;
+      margin: 6rem;
+      button {
+        //  margin:0 1.4rem;
+        width: 100%;
+      }
     }
   }
-}//home
+  .destination {
+    width: 30%;
+    margin-bottom: 30px;
+  }
+  @media @mobile {
+    .destination {
+      width: 98%;
+    }
+  }
+}
+//home
 .hdr {
-border-bottom: 1px dashed grey;
+  border-bottom: 1px dashed @silver;
+  margin: 0 2rem 0 2rem;
+  img {
+    margin-bottom: 2rem;
+    @media @mobile {
+      max-width: 90%;
+
+      margin: 0 auto 2rem auto;
+      .flex();
+    }
+  }
 }
